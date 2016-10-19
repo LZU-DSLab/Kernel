@@ -19,6 +19,8 @@ description: DSLab 内核小组文献阅读记录与分享，专注于 Linux 内
 baseurl: "/kernel" # the subpath of your site, e.g. /blog
 url: "https://lzu-dslab.github.io/kernel" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  LZU-DSLab
+lang: zh_CN
+timezone: Asia/Shanghai
 
 duoshuo-shortname: dslab-kernel
 
