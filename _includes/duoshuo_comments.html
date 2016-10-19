@@ -1,0 +1,21 @@
+{% if page.comments != false and jekyll.environment == "production" %}
+  {% if site.url %}
+    {% assign duoshuo_url = page.url | prepend: site.url %}
+  {% elsif site.github.url %}
+    {% assign duoshuo_url = page.url | prepend: site.github.url %}
+  {% endif %}
+
+  <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ duoshuo_url }}"></div>
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.duoshuo-shortname }}"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <noscript>Please enable JavaScript</noscript>
+{% endif %}
