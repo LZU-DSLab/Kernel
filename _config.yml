@@ -28,6 +28,18 @@ duoshuo-shortname: dslab-kernel
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jemoji
+  - jekyll-mentions
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    tag: '/tags/:name/'
+    category: '/categories/:name/'

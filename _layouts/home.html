@@ -3,23 +3,36 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
   {{ content }}
 
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend:site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
+        <span class="post-meta">发表日期：{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">分类：
+          {% for cat in post.categories %}
+          {{ cat |escape }}&nbsp;&nbsp;
+          {% endfor %}
+        </span>
+        <span class="post-meta">推荐值：
+          {% for cat in post.tags %}
+          {{ cat |escape }}&nbsp;&nbsp;
+          {% endfor %}
+        </span>
+        <span class="post-meta">被引用次数：{{ post.cites }}次</span>
+        <p class="post-description">
+          {% if post.description %}
+            {{ post.description }}
+          {% else %}
+            {{ post.excerpt }}
+          {% endif %}
+        </p>
       </li>
+
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend:site.baseurl }}">via RSS</a></p>
 
 </div>
