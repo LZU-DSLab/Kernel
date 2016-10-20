@@ -48,7 +48,9 @@ layout: default
                     {% assign cites = infos[7] | split:',' | first |remove:'"' %}
                     {% assign url = infos[11] | split:',' | first | remove:'"' %}
 
-                    {% if precd == recd %}
+                    {{ precd }}<br/>
+                    {{ recd }}
+                    {% if precd | url_encode == recd | url_encode %}
                         <li>
                             <h4>
                                 <a href="{{ url }}">{{ title }}</a>
