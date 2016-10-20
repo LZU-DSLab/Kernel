@@ -15,7 +15,7 @@
 (function (root, factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
-    define('pdfjs-dist/build/pdf', ['exports'], factory);
+    define('pdfjs-dist/build/pdfWrapper', ['exports'], factory);
   } else if (typeof exports !== 'undefined') {
     factory(exports);
   } else {
@@ -904,7 +904,7 @@
           this.rotation = rotation;
           this.offsetX = offsetX;
           this.offsetY = offsetY;
-          // creating transform to convert pdf coordinate system to the normal
+          // creating transform to convert pdfWrapper coordinate system to the normal
           // canvas like coordinates taking in account scale and rotation
           var centerX = (viewBox[2] + viewBox[0]) / 2;
           var centerY = (viewBox[3] + viewBox[1]) / 2;
@@ -6805,7 +6805,7 @@
           this.imageLayer = imageLayer;
           this.groupStack = [];
           this.processingType3 = null;
-          // Patterns are painted relative to the initial page/form transform, see pdf
+          // Patterns are painted relative to the initial page/form transform, see pdfWrapper
           // spec 8.7.2 NOTE 1.
           this.baseTransform = null;
           this.baseTransformStack = [];
@@ -7372,7 +7372,7 @@
             if (this.stateStack.length !== 0) {
               this.current = this.stateStack.pop();
               this.ctx.restore();
-              // Ensure that the clipping path is reset (fixes issue6413.pdf).
+              // Ensure that the clipping path is reset (fixes issue6413.pdfWrapper).
               this.pendingClip = null;
               this.cachedGetSinglePixelWidth = null;
             }
@@ -7734,7 +7734,7 @@
             ctx.translate(current.x, current.y + current.textRise);
             if (current.patternFill) {
               // TODO: Some shading patterns are not applied correctly to text,
-              //       e.g. issues 3988 and 5432, and ShowText-ShadingPattern.pdf.
+              //       e.g. issues 3988 and 5432, and ShowText-ShadingPattern.pdfWrapper.
               ctx.fillStyle = current.fillColor.getPattern(ctx, this);
             }
             if (fontDirection > 0) {
@@ -8502,7 +8502,7 @@
         useRequireEnsure = true;
       }
       if (typeof requirejs !== 'undefined' && requirejs.toUrl) {
-        workerSrc = requirejs.toUrl('pdfjs-dist/build/pdf.worker.js');
+        workerSrc = requirejs.toUrl('pdfjs-dist/build/pdfWrapper.worker.js');
       }
       var dynamicLoaderSupported = typeof requirejs !== 'undefined' && requirejs.load;
       fakeWorkerFilesLoader = useRequireEnsure ? function (callback) {
@@ -8511,7 +8511,7 @@
           callback(worker.WorkerMessageHandler);
         });
       } : dynamicLoaderSupported ? function (callback) {
-        requirejs(['pdfjs-dist/build/pdf.worker'], function (worker) {
+        requirejs(['pdfjs-dist/build/pdfWrapper.worker'], function (worker) {
           callback(worker.WorkerMessageHandler);
         });
       } : null;
@@ -9503,7 +9503,7 @@
           _initialize: function PDFWorker_initialize() {
             // If worker support isn't disabled explicit and the browser has worker
             // support, create a new web worker and test if it/the browser fulfills
-            // all requirements to run parts of pdf.js in a web worker.
+            // all requirements to run parts of pdfWrapper.js in a web worker.
             // Right now, the requirement is, that an Uint8Array is still an
             // Uint8Array as it arrives on the worker. (Chrome added this with v.15.)
             if (!isWorkerDisabled && !getDefaultSetting('disableWorker') && typeof Worker !== 'undefined') {
@@ -10402,7 +10402,7 @@
       /**
        * Path and filename of the worker file. Required when the worker is enabled
        * in development mode. If unspecified in the production build, the worker
-       * will be loaded based on the location of the pdf.js file. It is recommended
+       * will be loaded based on the location of the pdfWrapper.js file. It is recommended
        * that the workerSrc is set in a custom application to prevent issues caused
        * by third-party frameworks and libraries.
        * @var {string}

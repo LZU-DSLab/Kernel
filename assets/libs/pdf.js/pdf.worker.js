@@ -15,7 +15,7 @@
 (function (root, factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
-    define('pdfjs-dist/build/pdf.worker', ['exports'], factory);
+    define('pdfjs-dist/build/pdfWrapper.worker', ['exports'], factory);
   } else if (typeof exports !== 'undefined') {
     factory(exports);
   } else {
@@ -1254,7 +1254,7 @@
          Section 4.7, Mirrored, must be depicted by a mirrored glyph if the resolved
          directionality of that character is R.
          */
-        // don't mirror as characters are already mirrored in the pdf
+        // don't mirror as characters are already mirrored in the pdfWrapper
         // Finally, return string
         for (i = 0, ii = chars.length; i < ii; ++i) {
           var ch = chars[i];
@@ -4461,7 +4461,7 @@
           this.rotation = rotation;
           this.offsetX = offsetX;
           this.offsetY = offsetY;
-          // creating transform to convert pdf coordinate system to the normal
+          // creating transform to convert pdfWrapper coordinate system to the normal
           // canvas like coordinates taking in account scale and rotation
           var centerX = (viewBox[2] + viewBox[0]) / 2;
           var centerY = (viewBox[3] + viewBox[1]) / 2;
@@ -14714,12 +14714,12 @@
        * The original version was created by GitHub user notmasteryet.
        *
        * - The JPEG specification can be found in the ITU CCITT Recommendation T.81
-       *   (www.w3.org/Graphics/JPEG/itu-t81.pdf)
+       *   (www.w3.org/Graphics/JPEG/itu-t81.pdfWrapper)
        * - The JFIF specification can be found in the JPEG File Interchange Format
-       *   (www.w3.org/Graphics/JPEG/jfif3.pdf)
+       *   (www.w3.org/Graphics/JPEG/jfif3.pdfWrapper)
        * - The Adobe Application-Specific JPEG markers in the
        *   Supporting the DCT Filters in PostScript Level 2, Technical Note #5116
-       *   (partners.adobe.com/public/developer/en/ps/sdk/5116.DCT_Filter.pdf)
+       *   (partners.adobe.com/public/developer/en/ps/sdk/5116.DCT_Filter.pdfWrapper)
        */
       var JpegImage = function JpegImageClosure() {
         var dctZigZag = new Uint8Array([
@@ -15091,7 +15091,7 @@
             bitsCount = 0;
             marker = data[offset] << 8 | data[offset + 1];
             // Some bad images seem to pad Scan blocks with zero bytes, skip past
-            // those to attempt to find a valid marker (fixes issue4090.pdf).
+            // those to attempt to find a valid marker (fixes issue4090.pdfWrapper).
             while (data[offset] === 0x00 && offset < data.length - 1) {
               offset++;
               marker = data[offset] << 8 | data[offset + 1];
@@ -15549,7 +15549,7 @@
               component = frame.components[i];
               // Prevent errors when DQT markers are placed after SOF{n} markers,
               // by assigning the `quantizationTable` entry after the entire image
-              // has been parsed (fixes issue7406.pdf).
+              // has been parsed (fixes issue7406.pdfWrapper).
               var quantizationTable = quantizationTables[component.quantizationId];
               if (quantizationTable) {
                 component.quantizationTable = quantizationTable;
@@ -16213,7 +16213,7 @@
           // to precincts. Precinct partition divides a resolution according to width
           // and height parameters. The subband that belongs to the resolution level
           // has a different size than the level, unless it is the zero resolution.
-          // From Jasper documentation: jpeg2000.pdf, section K: Tier-2 coding:
+          // From Jasper documentation: jpeg2000.pdfWrapper, section K: Tier-2 coding:
           // The precinct partitioning for a particular subband is derived from a
           // partitioning of its parent LL band (i.e., the LL band at the next higher
           // resolution level)... The LL band associated with each resolution level is
@@ -34869,7 +34869,7 @@
               // The 'CF' dictionary itself should not be encrypted, and by setting
               // `suppressEncryption` we can prevent an infinite loop inside of
               // `XRef_fetchUncompressed` if the dictionary contains indirect objects
-              // (fixes issue7665.pdf).
+              // (fixes issue7665.pdfWrapper).
               cf.suppressEncryption = true;
             }
             this.cf = cf;
@@ -39607,7 +39607,7 @@
                 type = 'Type1';
               }
             } else if (isOpenTypeFile(file)) {
-              // Sometimes the type/subtype can be a complete lie (see issue7598.pdf).
+              // Sometimes the type/subtype can be a complete lie (see issue7598.pdfWrapper).
               type = subtype = 'OpenType';
             }
           }
@@ -39622,7 +39622,7 @@
             if (isType1File(file)) {
               subtype = 'CIDFontType0';
             } else if (isOpenTypeFile(file)) {
-              // Sometimes the type/subtype can be a complete lie (see issue6782.pdf).
+              // Sometimes the type/subtype can be a complete lie (see issue6782.pdfWrapper).
               type = subtype = 'OpenType';
             } else {
               subtype = 'CIDFontType0C';
@@ -41347,7 +41347,7 @@
               if (dupFirstEntry && (isCidToGidMapEmpty || !charCodeToGlyphId[0])) {
                 // We don't duplicate the first entry in the `charCodeToGlyphId` map
                 // if the font has a `CIDToGIDMap` which has already mapped the first
-                // entry to a non-zero `glyphId` (fixes issue7544.pdf).
+                // entry to a non-zero `glyphId` (fixes issue7544.pdfWrapper).
                 charCodeToGlyphId[0] = numGlyphs - 1;
               }
             } else {
@@ -41359,7 +41359,7 @@
               var cmapMappings = cmapTable.mappings;
               var cmapMappingsLength = cmapMappings.length;
               // The spec seems to imply that if the font is symbolic the encoding
-              // should be ignored, this doesn't appear to work for 'preistabelle.pdf'
+              // should be ignored, this doesn't appear to work for 'preistabelle.pdfWrapper'
               // where the the font is symbolic and it has an encoding.
               if (properties.hasEncoding && (cmapPlatformId === 3 && cmapEncodingId === 1 || cmapPlatformId === 1 && cmapEncodingId === 0) || cmapPlatformId === -1 && cmapEncodingId === -1 && // Temporary hack
                 !!getEncoding(properties.baseEncodingName)) {
@@ -41924,12 +41924,12 @@
           }
           // Ignore errors if the `suggestedLength` is huge enough that a Uint8Array
           // cannot hold the result of `getBytes`, and fallback to simply checking
-          // the entire stream (fixes issue3928.pdf).
+          // the entire stream (fixes issue3928.pdfWrapper).
           if (headerBytesLength === suggestedLength) {
             // Most of the time `suggestedLength` is correct, so to speed things up we
             // initially only check the last few bytes to see if the header was found.
             // Otherwise we (potentially) check the entire stream to prevent errors in
-            // `Type1Parser` (fixes issue5686.pdf).
+            // `Type1Parser` (fixes issue5686.pdfWrapper).
             block = findBlock(headerBytes, EEXEC_SIGNATURE, suggestedLength - 2 * EEXEC_SIGNATURE.length);
             if (block.found && block.length === suggestedLength) {
               return {
@@ -42157,7 +42157,7 @@
             for (i = 0; i < count; i++) {
               var glyph = glyphs[i];
               // If the CharString outline is empty, replace it with .notdef to
-              // prevent OTS from rejecting the font (fixes bug1252420.pdf).
+              // prevent OTS from rejecting the font (fixes bug1252420.pdfWrapper).
               if (glyph.length === 0) {
                 charStringsIndex.add([
                   0x8B,
@@ -42826,7 +42826,7 @@
               var rmin = encode[2 * i];
               var rmax = encode[2 * i + 1];
               // Prevent the value from becoming NaN as a result
-              // of division by zero (fixes issue6113.pdf).
+              // of division by zero (fixes issue6113.pdfWrapper).
               tmpBuf[0] = dmin === dmax ? rmin : rmin + (v - dmin) * (rmax - rmin) / (dmax - dmin);
               // call the appropriate function
               fns[i](tmpBuf, 0, dest, destOffset);
@@ -44513,7 +44513,7 @@
           }
           // For the blackPoint calculation details, please see
           // http://www.adobe.com/content/dam/Adobe/en/devnet/photoshop/sdk/
-          // AdobeBPC.pdf.
+          // AdobeBPC.pdfWrapper.
           // The destination blackPoint is the default blackPoint [0, 0, 0].
           var zeroDecodeL = decodeL(0);
           var X_DST = zeroDecodeL;
@@ -44573,7 +44573,7 @@
           var Z = cs.MZA * AGR + cs.MZB * BGG + cs.MZC * CGB;
           // The following calculations are based on this document:
           // http://www.adobe.com/content/dam/Adobe/en/devnet/photoshop/sdk/
-          // AdobeBPC.pdf.
+          // AdobeBPC.pdfWrapper.
           var XYZ = tempConvertMatrix1;
           XYZ[0] = X;
           XYZ[1] = Y;
@@ -45741,7 +45741,7 @@
                 assert(isDict(currentNode), 'page dictionary kid reference points to wrong type of object');
                 var count = currentNode.get('Count');
                 // If the current node doesn't have any children, avoid getting stuck
-                // in an empty node further down in the tree (see issue5644.pdf).
+                // in an empty node further down in the tree (see issue5644.pdfWrapper).
                 if (count === 0) {
                   checkAllKids = true;
                 }
@@ -45757,7 +45757,7 @@
                   // bottom of the tree which means the page requested must be a
                   // descendant of this pages node. Ideally we would just resolve the
                   // promise with the page ref here, but there is the case where more
-                  // pages nodes could link to single a page (see issue 3666 pdf). To
+                  // pages nodes could link to single a page (see issue 3666 pdfWrapper). To
                   // handle this push it back on the queue so if it is a pages node it
                   // will be descended into.
                   nodesToVisit = [kids[pageIndex - currentPageIndex]];
@@ -45885,7 +45885,7 @@
               // The 'Encrypt' dictionary itself should not be encrypted, and by
               // setting `suppressEncryption` we can prevent an infinite loop inside
               // of `XRef_fetchUncompressed` if the dictionary contains indirect
-              // objects (fixes issue7665.pdf).
+              // objects (fixes issue7665.pdfWrapper).
               encrypt.suppressEncryption = true;
               this.encrypt = new CipherTransformFactory(encrypt, fileId, this.password);
             }
@@ -47874,7 +47874,7 @@
                   if (processed[xObject.toString()]) {
                     // The XObject has already been processed, and by avoiding a
                     // redundant `xref.fetch` we can *significantly* reduce the load
-                    // time for badly generated PDF files (fixes issue6961.pdf).
+                    // time for badly generated PDF files (fixes issue6961.pdfWrapper).
                     continue;
                   }
                   xObject = xref.fetch(xObject);
@@ -48068,7 +48068,7 @@
             // Create an IR of the pattern code.
             var tilingOpList = new OperatorList();
             // Merge the available resources, to prevent issues when the patternDict
-            // is missing some /Resources entries (fixes issue6541.pdf).
+            // is missing some /Resources entries (fixes issue6541.pdfWrapper).
             var resourcesArray = [
               patternDict.get('Resources'),
               resources
@@ -48296,13 +48296,13 @@
               fontID = fontAliases[hash].fontID;
             }
             // Workaround for bad PDF generators that reference fonts incorrectly,
-            // where `fontRef` is a `Dict` rather than a `Ref` (fixes bug946506.pdf).
+            // where `fontRef` is a `Dict` rather than a `Ref` (fixes bug946506.pdfWrapper).
             // In this case we should not put the font into `this.fontCache` (which is
             // a `RefSetCache`), since it's not meaningful to use a `Dict` as a key.
             //
             // However, if we don't cache the font it's not possible to remove it
             // when `cleanup` is triggered from the API, which causes issues on
-            // subsequent rendering operations (see issue7403.pdf).
+            // subsequent rendering operations (see issue7403.pdfWrapper).
             // A simple workaround would be to just not hold `font.translated`
             // references in this case, but this would force us to unnecessarily load
             // the same fonts over and over.
@@ -48778,7 +48778,7 @@
             function replaceWhitespace(str) {
               // Replaces all whitespaces with standard spaces (0x20), to avoid
               // alignment issues between the textLayer and the canvas if the text
-              // contains e.g. tabs (fixes issue6612.pdf).
+              // contains e.g. tabs (fixes issue6612.pdfWrapper).
               var i = 0, ii = str.length, code;
               while (i < ii && (code = str.charCodeAt(i)) >= 0x20 && code <= 0x7F) {
                 i++;
@@ -49250,7 +49250,7 @@
                   glyphName = differences[charcode];
                   if (glyphName === '.notdef') {
                     // Skip .notdef to prevent rendering errors, e.g. boxes appearing
-                    // where there should be spaces (fixes issue5256.pdf).
+                    // where there should be spaces (fixes issue5256.pdfWrapper).
                     continue;
                   }
                   encoding[charcode] = glyphName;
@@ -49601,7 +49601,7 @@
                     // 'Differences' entry.
                     // Ideally we should check the contents of the array, but to avoid
                     // parsing it here and then again in |extractDataStructures|,
-                    // we only use the array length for now (fixes bug1157493.pdf).
+                    // we only use the array length for now (fixes bug1157493.pdfWrapper).
                     hash.update(entry.length.toString());
                   }
                 }
@@ -49641,7 +49641,7 @@
             if (!descriptor) {
               if (type === 'Type3') {
                 // FontDescriptor is only required for Type3 fonts when the document
-                // is a tagged pdf. Create a barbebones one to get by.
+                // is a tagged pdfWrapper. Create a barbebones one to get by.
                 descriptor = new Dict(null);
                 descriptor.set('FontName', Name.get(type));
                 descriptor.set('FontBBox', dict.getArray('FontBBox'));
@@ -51684,7 +51684,7 @@
               } else if (url) {
                 url = addDefaultProtocolToUrl(url);
               }
-              // TODO: pdf spec mentions urls can be relative to a Base
+              // TODO: pdfWrapper spec mentions urls can be relative to a Base
               // entry in the dictionary.
               break;
             case 'GoTo':
@@ -53157,7 +53157,7 @@
               startWorkerTask(task);
               var pageNum = pageIndex + 1;
               var start = Date.now();
-              // Pre compile the pdf page and fetch the fonts/images.
+              // Pre compile the pdfWrapper page and fetch the fonts/images.
               page.getOperatorList(handler, task, data.intent, data.renderInteractiveForms).then(function (operatorList) {
                 finishWorkerTask(task);
                 info('page=' + pageNum + ' - getOperatorList: time=' + (Date.now() - start) + 'ms, len=' + operatorList.totalLength);
@@ -53271,7 +53271,7 @@
                 action: 'console_error',
                 data: args
               });
-              throw 'pdf.js execution error';
+              throw 'pdfWrapper.js execution error';
             },
             time: function time(name) {
               consoleTimer[name] = Date.now();
@@ -53620,7 +53620,7 @@
           } else if (this._isRangeSupported) {
             // NOTE: by cancelling the full request, and then issuing range
             // requests, there will be an issue for sites where you can only
-            // request the pdf once. However, if this is the case, then the
+            // request the pdfWrapper once. However, if this is the case, then the
             // server should not be returning that it can support range
             // requests.
             networkManager.abortRequest(fullRequestXhrId);

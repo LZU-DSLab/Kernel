@@ -46,7 +46,7 @@ layout: default
                     {% assign date = infos[3] | split:',' | first | remove:'"' %}
                     {% assign precd = infos[6] | split:',' | first | remove:'"' %}
                     {% assign cites = infos[7] | split:',' | first |remove:'"' %}
-                    {% assign url = infos[10] | split:',' | first | remove:'"' %}
+                    {% assign url = infos[11] | split:',' | first | remove:'"' %}
 
                     {% if precd == recd %}
                         <li>

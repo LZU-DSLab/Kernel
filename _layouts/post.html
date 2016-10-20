@@ -3,16 +3,36 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+    <header class="post-header">
+        <button id="toggle-pdf" class="toggle-pdf" title="显示原文">PDF</button>
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: "%b %-d,%Y" }}
+            </time>
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span>
+            </span>
+            • <span>{{ page.cites }}次</span>
+            • <span>
+                {% for cat in page.categories %}
+                    <a href='{{ "/categories/#" | prepend:site.baseurl | append:cat }}' title="{{cat}}">{{cat}}</a>
+                {% endfor %}
+            </span>
+            • <span>
+                {% for tag in page.tags %}
+                    <a href='{{ "/tags/#" | prepend:site.baseurl | append:tag }}' title="{{tag}}">{{tag | upcase}}</a>
+                {% endfor %}
+            </span>
+            <input id="url" type="hidden" value='{{ "/data/papers/" | prepend:site.baseurl | append:page.paper}}'>
+        </p>
+    </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
 
-  {% if site.duoshuo-shortname %}
+    {% if site.duoshuo-shortname %}
     {% include duoshuo_comments.html %}
-  {% endif %}
+    {% endif %}
 </article>

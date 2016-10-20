@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+{% include header.html %}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div id="post-wrapper" class="wrapper">
+            {{ content }}
+        </div>
+        <div id="pdf-wrapper" class="pdf-wrapper">
+            <canvas id="pdf-canvas"></canvas>
+            <div class="btns">
+                <button class="page-btn" id="prev">上一页</button>
+                <span class="text">页数：<strong id="current-page"></strong> / <strong id="page-count"></strong></span>
+                <button class="page-btn" id="next">下一页</button>
+            </div>
+        </div>
     </main>
 
-    {% include footer.html %}
+{% include footer.html %}
 
-  </body>
+</body>
 
 </html>
