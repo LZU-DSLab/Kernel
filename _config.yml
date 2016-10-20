@@ -30,16 +30,7 @@ gems:
   - jekyll-feed
   - jemoji
   - jekyll-mentions
-  - jekyll-archives
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks:
-    tag: '/tags/:name/'
-    category: '/categories/:name/'
