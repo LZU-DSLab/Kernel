@@ -44,7 +44,6 @@ layout: default
             <h3>{{ recd }}</h3>
             <ul>
                 {% for post in rawposts %}
-                {{ post }}
                     {% assign infos = post | split:"=>" %}
                     {% assign title = infos[2] | split:',' | first | remove:'"' %}
                     {% assign date = infos[3] | split:',' | first | remove:'"' %}
