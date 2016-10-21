@@ -11,15 +11,15 @@ layout: default
             <h2>
                 <a class="post-link" href="{{ post.url | prepend:site.baseurl }}">{{ post.title | escape }}</a>
             </h2>
-            <span class="post-meta">日期：{{ post.date | date: "%b %-d, %Y" }}</span>
+            <span class="post-meta">日期：{{ post.date | date: "%Y-%m-%d" }}</span>
             <span class="post-meta">分类：
               {% for cat in post.categories %}
-              {{ cat |escape }}&nbsp;&nbsp;
+                <a href="{{ site.baseurl }}/categories/#{{ cat }}">{{ cat |escape }}</a>&nbsp;&nbsp;
               {% endfor %}
             </span>
             <span class="post-meta">分类：
               {% for tag in post.tags %}
-              {{ tag |escape }}&nbsp;&nbsp;
+                <a href="{{ site.baseurl }}/tags/#{{ tag }}" >{{ tag |escape }}</a>&nbsp;&nbsp;
               {% endfor %}
             </span>
             <span class="post-meta">推荐值：{{ post.recommend }}&nbsp;&nbsp;</span>

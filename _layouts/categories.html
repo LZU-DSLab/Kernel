@@ -6,63 +6,31 @@ layout: default
 <a href="#{{ cat | first }}">{{ cat | first }} {{ cat | last | size }}</a>
 {% endfor %}
 
-{% for cat in site.categories %}
-{% assign ct = cat | first %}
-{% assign rawposts = "" %}
-{% assign rawrecds = "" %}
-    <h2 id="{{ ct }}">{{ ct }}&nbsp;<small>共{{ cat | last | size }}篇</small></h2>
+{% assign post_by_cat = site.posts | group_by:"categories" %}
+
+{% for cat in post_by_cat %}
+    <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' }}">
+        {{ cat.name |remove:"[" |remove:"]" |remove:'"' }}
+        <small>共{{ cat.items | size }}篇</small>
+    </h3>
     <ul>
-        {% for post in site.posts %}
-            {% if post.categories contains ct %}
-        {{ post | inspect }}
-                {% assign rawposts = rawposts | append:post | append:"<==>" %}
-                {% assign rawrecds = rawrecds | append:post.recommend | append:'|' %}
-            {% endif %}
-        {% endfor %}
-        {% assign rawposts = rawposts | split:'<==>' %}
-        {% assign rawrecds = rawrecds | split:'|' %}
-
-        <!-- 去除重复的标签 -->
-        {% comment %}
-        {% endcomment %}
-        {% assign recds = "" %}
-        {% for recd in rawrecds %}
-            {% if recd != "" %}
-                {% if recds == "" %}
-                    {% assign recds = recd | split:'|' %}
-                {% endif %}
-                {% unless recds contains recd %}
-                    {% assign recds = recds | join:'|' | append:'|' | append:recd | split:'|' %}
-                {% endunless %}
-            {% endif %}
-        {% endfor %}
-
-        {{ rawposts }}
-
-
-        {% for recd in recds %}
-            <h3>{{ recd }}</h3>
-            <ul>
-                {% for post in rawposts %}
-                    {% assign infos = post | split:"=>" %}
-                    {% assign title = infos[2] | split:',' | first | remove:'"' %}
-                    {% assign date = infos[3] | split:',' | first | remove:'"' %}
-                    {% assign precd = infos[6] | split:',' | first | remove:'"' %}
-                    {% assign cites = infos[7] | split:',' | first |remove:'"' %}
-                    {% assign url = infos[11] | split:',' | first | remove:'"' %}
-
-                    {{ precd }}<br/>
-                    {{ recd }}
-                    {% if precd | url_encode == recd | url_encode %}
+        {% assign post_by_recommend = cat.items | group_by:"recommend" %}
+        {% for recommend in post_by_recommend %}
+            <li><h4>
+                    {{ recommend.name }}
+                    <small>共{{ recommend.items | size }}篇</small>
+                </h4>
+                <ul>
+                    {% for post in recommend.items %}
                         <li>
-                            <h4>
-                                <a href="{{ url }}">{{ title }}</a>
-                                <small>被引用：{{ cites }}次 {{ date | date_to_string }}</small>
-                            </h4>
+                            <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+                            <span>{{ post.cites }}次</span>
+                            • <span>{{ post.author }}</span>
+                            • <span>{{ post.date | date:"%Y-%m-%d" }}</span>
                         </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+                    {% endfor %}
+                </ul>
+            </li>
         {% endfor %}
     </ul>
 {% endfor %}
