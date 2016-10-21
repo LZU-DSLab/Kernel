@@ -14,7 +14,7 @@ layout: default
     <ul>
         {% for post in site.posts %}
             {% if post.categories contains ct %}
-        {{ post }}
+        {{ post | inspect }}
                 {% assign rawposts = rawposts | append:post | append:"<==>" %}
                 {% assign rawrecds = rawrecds | append:post.recommend | append:'|' %}
             {% endif %}
