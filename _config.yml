@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: DSLab 内核小组知识分享
+title: DSLab 内核小组
 email: kinggo@gmail.com
 description: DSLab 内核小组文献阅读记录与分享，专注于 Linux 内核开发
 baseurl: "/kernel" # the subpath of your site, e.g. /blog

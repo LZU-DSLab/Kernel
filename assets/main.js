@@ -20,7 +20,10 @@ $(document).ready(function () {
         pdfWrapper.toggleClass("pdf-wrapper-on-pdf-show").promise().done(function () {
             if (postWrapper.hasClass("post-wrapper-on-pdf-show")) {
 
-                PDFJS.getDocument(url).then(function (pdfDoc_) {
+                PDFJS.getDocument(url, null, null, function (progress) {
+                    console.log(progress.loaded);
+                    console.log(progress.total);
+                }).then(function (pdfDoc_) {
                     pdfDoc = pdfDoc_;
                     $("#page-count").html(pdfDoc.numPages);
 

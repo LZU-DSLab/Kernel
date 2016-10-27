@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
         <button id="toggle-pdf" class="toggle-pdf" title="显示原文">PDF</button>
@@ -32,7 +32,9 @@ layout: default
         {{ content }}
     </div>
 
+
     {% if site.duoshuo-shortname %}
     {% include duoshuo_comments.html %}
     {% endif %}
-</article>
+</div>
+{% include pdfjs.html %}
