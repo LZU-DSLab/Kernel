@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
-
-{% for cat in site.categories %}
-<a href="#{{ cat | first }}">{{ cat | first }} {{ cat | last | size }}</a>
-{% endfor %}
+<div id="categories" class="span8">
+    <div class="breadcrumb">
+    {% for cat in site.categories %}
+        <a href="#{{ cat | first }}"><label class="label label-success">{{ cat | first }}<span>{{ cat | last | size }}</span></label></a>
+    {% endfor %}
+    </div>
 
 {% assign post_by_cat = site.posts | group_by:"categories" %}
 
@@ -34,3 +36,5 @@ layout: default
         {% endfor %}
     </ul>
 {% endfor %}
+</div>
+{% include sidebar.html %}

@@ -4,9 +4,7 @@ layout: default
 
 <div class="home span8">
 
-    <!--<ul class="post-list">-->
     {% for post in site.posts %}
-    <!--<li>-->
     <section class="hero-unit">
         <h3><a class="media-heading" href="{{ post.url | prepend:site.baseurl }}">{{ post.title | escape }}</a></h3>
         <span class="post-meta"><span class="label">日期</span>{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -20,21 +18,18 @@ layout: default
                 <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag |escape }}</a>&nbsp;&nbsp;
               {% endfor %}
             </span>
-        <span class="post-meta"><span class="label">推荐度</span>{{ post.recommend }}&nbsp;&nbsp;</span>
-        <span class="post-meta"><span class="label">被引用</span>{{ post.cites }}次</span>
+        <span class="post-meta"><span class="label label-important">推荐度</span>{{ post.recommend }}&nbsp;&nbsp;</span>
+        <span class="post-meta"><span class="label label-important">被引用</span>{{ post.cites }}次</span>
         <p class="post-description">
             {% if post.description %}
-            {{ post.description }}
+                {{ post.description }}
             {% else %}
-            {{ post.excerpt }}
+                {{ post.excerpt }}
             {% endif %}
         </p>
         <a class="btn" href="{{ post.url | prepend:site.baseurl }}">阅读更多 &raquo;</a>
     </section>
-    <!--</li>-->
-
     {% endfor %}
-    <!--</ul>-->
 
 </div>
 {% include sidebar.html %}
