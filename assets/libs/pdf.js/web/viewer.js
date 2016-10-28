@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 'use strict';
-var DEFAULT_URL = 'compressed.tracemonkey-pldi-09.pdf';
+var DEFAULT_URL = 'about:blank';
 ;
 var pdfjsWebLibs;
 {
@@ -498,7 +498,7 @@ var pdfjsWebLibs;
         "showPreviousViewOnLoad": true,
         "defaultZoomValue": "",
         "sidebarViewOnLoad": 0,
-        "enableHandToolOnLoad": false,
+        "enableHandToolOnLoad": true,
         "enableWebGL": false,
         "pdfBugEnabled": false,
         "disableRange": false,

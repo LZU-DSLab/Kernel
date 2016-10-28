@@ -1,12 +1,11 @@
 ---
 layout: default
 ---
-<div class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <header class="post-header">
-        <button id="toggle-pdf" class="toggle-pdf" title="显示原文">PDF</button>
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
+<div id="article" class="span6">
+    <div class="media">
+        <!--<button id="toggle-pdf" class="toggle-pdf" title="显示原文">PDF</button>-->
+        <h3 class="media-heading" itemprop="name headline">{{ page.title | escape }}</h3>
+        <p class="media-body">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: "%Y-%m-%d" }}
             </time>
@@ -26,7 +25,7 @@ layout: default
             </span>
             <input id="url" type="hidden" value='{{ "/data/papers/" | prepend:site.baseurl | append:page.paper}}'>
         </p>
-    </header>
+    </div>
 
     <div class="post-content" itemprop="articleBody">
         {{ content }}
@@ -38,3 +37,6 @@ layout: default
     {% endif %}
 </div>
 {% include pdfjs.html %}
+<div class="hidden-desktop">
+    {% include sidebar.html %}
+</div>
