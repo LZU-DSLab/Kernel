@@ -1,3 +1,3 @@
-<iframe id="pdfWrapper" class="span6 visible-desktop pdf-wrapper" src="/assets/libs/pdf.js/web/viewer.html?file={{ page.paper | prepend:'/data/papers/' | prepend:site.baseurl }}">
+<iframe id="pdfWrapper" class="span6 visible-desktop pdf-wrapper" src="{{ '/assets/libs/pdf.js/web/viewer.html?file=' | prepend:site.baseurl }}{{ page.paper | prepend:'/data/papers/' | prepend:site.baseurl }}">
 
 </iframe>
