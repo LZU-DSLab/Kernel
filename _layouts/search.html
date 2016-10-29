@@ -1,15 +1,22 @@
 ---
 layout: default
 ---
-<div id="search-container">
-    <input type="text" id="search-input" placeholder="search...">
-    <ul id="results-container"></ul>
+
+<div id="search" class="span8">
+    <div id="search-container">
+        <!--<form class="navbar-search">-->
+            <input type="text" class="search-query" id="search-input" placeholder="搜索...">
+        <!--</form>-->
+        <ul id="results-container"></ul>
+    </div>
+    <script src='{{ "/assets/libs/jekyll-simple-search.min.js" | prepend:site.baseurl }}' type="text/javascript"></script>
+    <script type="text/javascript">
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ "/data/data.json" | prepend:site.baseurl }}',
+            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a><span>{category}&nbsp;{date}</span></li>'
+        })
+    </script>
 </div>
-<script src='{{ "/assets/libs/jekyll-simple-search.min.js" | prepend:site.baseurl }}' type="text/javascript"></script>
-<script type="text/javascript">
-    SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ "/data/data.json" | prepend:site.baseurl }}',
-    })
-</script>
+{% include sidebar.html %}

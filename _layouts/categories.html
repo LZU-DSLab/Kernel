@@ -8,33 +8,32 @@ layout: default
     {% endfor %}
     </div>
 
-{% assign post_by_cat = site.posts | group_by:"categories" %}
+    {% assign post_by_cat = site.posts | group_by:"categories" %}
 
-{% for cat in post_by_cat %}
-    <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' }}">
-        {{ cat.name |remove:"[" |remove:"]" |remove:'"' }}
-        <small>共{{ cat.items | size }}篇</small>
-    </h3>
-    <ul>
-        {% assign post_by_recommend = cat.items | group_by:"recommend" %}
-        {% for recommend in post_by_recommend %}
-            <li><h4>
-                    {{ recommend.name }}
-                    <small>共{{ recommend.items | size }}篇</small>
-                </h4>
-                <ul>
-                    {% for post in recommend.items %}
-                        <li>
-                            <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
-                            <span>{{ post.cites }}次</span>
-                            • <span>{{ post.author }}</span>
-                            • <span>{{ post.date | date:"%Y-%m-%d" }}</span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
-    </ul>
-{% endfor %}
+    {% for cat in post_by_cat %}
+        <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' }}">
+            {{ cat.name |remove:"[" |remove:"]" |remove:'"' }}
+        </h3>
+        <ul>
+            {% assign post_by_recommend = cat.items | group_by:"recommend" %}
+            {% for recommend in post_by_recommend %}
+                <li><h4>
+                        {{ recommend.name }}
+                        <small>共{{ recommend.items | size }}篇</small>
+                    </h4>
+                    <ul>
+                        {% for post in recommend.items %}
+                            <li>
+                                <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+                                <span>{{ post.cites }}次</span>
+                                • <span>{{ post.author }}</span>
+                                • <span>{{ post.date | date:"%Y-%m-%d" }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
 </div>
 {% include sidebar.html %}

@@ -1,4 +1,4 @@
-#categories {
+#categories, #tags {
   .breadcrumb {
     a {
       text-decoration: none;
@@ -9,6 +9,12 @@
       }
       span {
         margin-left: 10px;
+      }
+    }
+    a:hover {
+      &>.label {
+        font-size: 18px;
+        padding: 4px 8px;
       }
     }
   }

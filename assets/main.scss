@@ -12,29 +12,4 @@
   border-bottom: dashed 1px #ddd;
 }
 
-.post-content {
-  font-size: 16px;
-  line-height: 25px;
-}
-
-.pdf-wrapper {
-  border-left: solid 2px #eee;
-  position: fixed;
-  bottom: 154px;
-  right: 10px;
-}
-
-#article {
-  @media (max-width: 979px) {
-    width: 100%;
-    height: auto !important;
-  }
-}
-
-#sidebar {
-  @media (max-width: 979px) {
-    width: 100%;
-  }
-}
-
 @import "minima";

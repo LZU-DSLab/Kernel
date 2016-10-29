@@ -1,0 +1,17 @@
+#navbar {
+  .navbar-inner {
+    min-height: 60px;
+    border-radius: 0;
+    .brand {
+      padding: 20px;
+    }
+    .nav > li > a {
+      @media (min-width: 980px) {
+        padding: 20px 15px 20px;
+      }
+    }
+    .btn-navbar {
+      margin-top: 15px;
+    }
+  }
+}

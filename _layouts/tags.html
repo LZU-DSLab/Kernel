@@ -1,25 +1,27 @@
 ---
 layout: default
 ---
+<div id="tags" class="span8">
+    <div class="breadcrumb">
+        {% for tag in site.tags %}
+            <a href="#{{ tag | first }}"> <label class="label label-success">{{ tag |first }} <span>{{ tag | last | size }}</span></label></a>
+        {% endfor %}
+    </div>
 
-
-{% for tag in site.tags %}
-<a href="#{{ tag | first }}"> {{ tag |first }} {{ tag | last | size }}</a>
-{% endfor %}
-
-{% for tag in site.tags %}
-{% assign tg = tag |first %}
-<h2 id="{{ tg }}">{{ tg }}&nbsp;<small>共{{ tag | last | size }}篇</small></h2>
-<ul>
-    {% for post in site.posts %}
-    {% if post.tags contains tg %}
-    <li>
-        <h4>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>被引用：{{ post.cites }}次 {{ post.date | date_to_string }}</small>
-        </h4>
-    </li>
-    {% endif %}
+    {% for tag in site.tags %}
+    {% assign tg = tag |first %}
+    <h3 id="{{ tg }}">{{ tg }}</h3>
+    <ul>
+        {% for post in site.posts %}
+        {% if post.tags contains tg %}
+        <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small>被引用：{{ post.cites }}次 {{ post.date | date:"%Y-%m-%d" }}</small>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
     {% endfor %}
-</ul>
-{% endfor %}
+</div>
+
+{% include sidebar.html %}
