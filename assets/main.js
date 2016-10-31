@@ -3,11 +3,13 @@
  */
 
 $(document).ready(function () {
-    $("#pdfWrapper").height($(window).height() - 202)
-    $("#article").css("min-height", $(window).height() - 213)
+    var pdfWrapper = $("#pdfWrapper");
+    $("#rootContainer").css("min-height", $(window).height() - 232);
+    pdfWrapper.height($(window).height() - 229);
+
 })
 
 $(window).resize(function () {
-    $("#pdfWrapper").height($(window).height() - 202)
-    $("#article").css("min-height", $(window).height() - 213)
+    $("#rootContainer").css("min-height", $(window).height() - 232);
+    $("#pdfWrapper").height($(window).height() - 229)
 })

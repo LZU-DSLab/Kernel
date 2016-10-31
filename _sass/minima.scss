@@ -12,10 +12,18 @@
 }
 
 .pdf-wrapper {
-  border-left: solid 2px #eee;
+  border: none;
   position: fixed;
   bottom: 154px;
   right: 10px;
+}
+
+#rootContainer>.row-fluid>.span8, #rootContainer>.row-fluid>.span6 {
+  @media (max-width: 979px) {
+    border-bottom: dashed 1px #e0e0e0;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 #article {
