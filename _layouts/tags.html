@@ -2,9 +2,10 @@
 layout: default
 ---
 <div id="tags" class="span8">
+    <h3 class="page-header">所有标签</h3>
     <div class="breadcrumb">
         {% for tag in site.tags %}
-            <a href="#{{ tag | first }}"> <label class="label label-success">{{ tag |first }} <span>{{ tag | last | size }}</span></label></a>
+            <a href="#{{ tag | first }}">{{ tag |first }} <span>{{ tag | last | size }}</span></a>
         {% endfor %}
     </div>
 

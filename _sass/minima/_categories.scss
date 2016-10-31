@@ -1,7 +1,17 @@
 #categories, #tags {
+  @media (min-width: 980px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .breadcrumb {
     a {
       text-decoration: none;
+      border: dashed 1px #ccc;
+      border-radius: 3px;
+      padding: 5px;
+      margin: 5px;
+      color: #555555;
+      font-size: 16px;
       .label {
         font-size: 16px;
         font-weight: normal;
@@ -9,13 +19,16 @@
       }
       span {
         margin-left: 10px;
+        vertical-align: super;
+        font-size: .8em;
       }
     }
     a:hover {
-      &>.label {
-        font-size: 18px;
-        padding: 4px 8px;
-      }
+      background-color: #EEEEEE;
     }
+  }
+  h3 {
+    text-shadow: 1px 1px 1px #868686;
+    font-weight: 500;
   }
 }

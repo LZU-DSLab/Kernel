@@ -2,9 +2,10 @@
 layout: default
 ---
 <div id="categories" class="span8">
+    <h2 class="page-header">所有分类</h2>
     <div class="breadcrumb">
     {% for cat in site.categories %}
-        <a href="#{{ cat | first }}"><label class="label label-success">{{ cat | first }}<span>{{ cat | last | size }}</span></label></a>
+        <a href="#{{ cat | first }}">{{ cat | first }}<span>{{ cat | last | size }}</span></a>
     {% endfor %}
     </div>
 

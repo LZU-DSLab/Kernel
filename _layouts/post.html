@@ -3,7 +3,7 @@ layout: default
 ---
 <div id="article" class="span6">
     <div class="media">
-        <h3 class="media-heading" itemprop="name headline">{{ page.title | escape }}</h3>
+        <h3 class="page-header" itemprop="name headline">{{ page.title | escape }}</h3>
         <p class="media-body">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: "%Y-%m-%d" }}
@@ -30,9 +30,32 @@ layout: default
         {{ content }}
     </div>
 
+    <div class="page-nav">
+        <ul class="pager">
+            {% if page.previous %}
+                <li class="previous disabled">
+                    <a href="#">&larr; 上一篇</a>
+                </li>
+            {% else %}
+                <li class="previous">
+                    <a href="{{ page.previous.url | prepend:site.baseurl }}">&larr; {{page.previous.title | escape |truncatewords:5}}</a>
+                </li>
+            {% endif %}
+
+            {% if page.next %}
+                <li class="next disabled">
+                    <a href="#">下一篇 &rarr;</a>
+                </li>
+            {% else %}
+                <li class="next">
+                    <a href="{{page.next.url | prepend:site.baseurl }}">{{ page.next.title |escape |truncatewords:5 }} &rarr;</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
 
     {% if site.duoshuo-shortname %}
-    {% include duoshuo_comments.html %}
+        {% include duoshuo_comments.html %}
     {% endif %}
 </div>
 {% include pdfjs.html %}
