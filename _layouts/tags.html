@@ -17,7 +17,7 @@ layout: default
         {% if post.tags contains tg %}
         <li>
             <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>被引用：{{ post.cites }}次 {{ post.date | date:"%Y-%m-%d" }}</small>
+            <small>{{ post.cites }} {{ post.date | date:"%Y-%m-%d" }}</small>
         </li>
         {% endif %}
         {% endfor %}
