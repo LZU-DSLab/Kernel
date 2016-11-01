@@ -7,9 +7,11 @@
 
 {% include header.html %}
 
-    <div id="rootContainer" class="container-fluid" aria-label="Content">
-        <div class="row-fluid">
+    <div id="rootContainer" class="container" aria-label="Content">
+        <div class="row">
             {{ content }}
+
+            {% include sidebar.html %}
         </div>
     </div>
 

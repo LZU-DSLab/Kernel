@@ -29,6 +29,11 @@ paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
+redcarpet:
+  extensions: [fenced_code_blocks]
+
+kramdown:
+  input: GFM
 gems:
   - jekyll-feed
   - jemoji

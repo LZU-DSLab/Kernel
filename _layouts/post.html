@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div id="article" class="span6">
+<div id="article" class="span8">
     <div class="media">
         <h3 class="page-header" itemprop="name headline">{{ page.title | escape }}</h3>
         <p class="media-body">
@@ -30,26 +30,28 @@ layout: default
         {{ content }}
     </div>
 
+    {% include duoshuo_share.html %}
+
     <div class="page-nav">
         <ul class="pager">
             {% if page.previous %}
-                <li class="previous disabled">
-                    <a href="#">&larr; 上一篇</a>
-                </li>
+            <li class="previous">
+                <a href="{{ page.previous.url | prepend:site.baseurl }}" title="{{page.previous.title | escape}}">&larr; {{page.previous.title | escape |truncate:10}}</a>
+            </li>
             {% else %}
-                <li class="previous">
-                    <a href="{{ page.previous.url | prepend:site.baseurl }}">&larr; {{page.previous.title | escape |truncatewords:5}}</a>
-                </li>
+            <li class="previous disabled">
+                <a href="#">&larr; 上一篇</a>
+            </li>
             {% endif %}
 
             {% if page.next %}
-                <li class="next disabled">
-                    <a href="#">下一篇 &rarr;</a>
-                </li>
+            <li class="next">
+                <a href="{{page.next.url | prepend:site.baseurl }}" title="{{page.next.title |escape}}">{{ page.next.title |escape |truncate:10 }} &rarr;</a>
+            </li>
             {% else %}
-                <li class="next">
-                    <a href="{{page.next.url | prepend:site.baseurl }}">{{ page.next.title |escape |truncatewords:5 }} &rarr;</a>
-                </li>
+            <li class="next disabled">
+                <a href="#">下一篇 &rarr;</a>
+            </li>
             {% endif %}
         </ul>
     </div>
@@ -58,7 +60,9 @@ layout: default
         {% include duoshuo_comments.html %}
     {% endif %}
 </div>
-{% include pdfjs.html %}
-<div class="hidden-desktop">
-    {% include sidebar.html %}
-</div>
+
+
+{% if page.paper %}
+    {% include pdfjs.html %}
+{% endif %}
+

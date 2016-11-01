@@ -15,7 +15,7 @@ layout: default
         <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' }}">
             {{ cat.name |remove:"[" |remove:"]" |remove:'"' }}
         </h3>
-        <ul>
+        <ol>
             {% assign post_by_recommend = cat.items | group_by:"recommend" %}
             {% for recommend in post_by_recommend %}
                 <li><h4>
@@ -34,7 +34,6 @@ layout: default
                     </ul>
                 </li>
             {% endfor %}
-        </ul>
+        </ol>
     {% endfor %}
 </div>
-{% include sidebar.html %}

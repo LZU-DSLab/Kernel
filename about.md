@@ -1,15 +1,15 @@
 ---
 layout: page
-title: 关于
+title: 关于我们
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Welcome to DSLab website,the on-line resources for embedded linux developers.The dslab was founded in July, 2005 .The lab intends to provide an academic and industrial technology pool that will allow advance in embedded and distributed technology based on free-software components, so as to broaden the filed of applications and increase the diversity of implementations. To achieve this not only a reference implementations should be provided in an open-lab environment, but a “packaged technology”, including necessary documentation and surrounding tools and know how based on an free-software license models is anticipated.Thank you!
 
-You can find the source code for the Jekyll new theme at:
+Address:Tianshui South Road 222,Lanzhou,P.R.China
 
-[minima](https://github.com/jekyll/minima)
+Tel:+86-931-8912025
 
-You can find the source code for Jekyll at
+Fax:+86-931-8912025 Zip Code:730000
 
-[jekyll](https://github.com/jekyll/jekyll)
+Email:[zhouqg@lzu.edu.cn](mailto:zhouqg@lzu.edu.cn)

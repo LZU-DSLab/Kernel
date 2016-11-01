@@ -15,8 +15,7 @@ layout: default
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '{{ "/data/data.json" | prepend:site.baseurl }}',
-            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a><span>{category}&nbsp;{date}</span></li>'
+            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a><br><span>{category}&nbsp;{date}</span></li>'
         })
     </script>
 </div>
-{% include sidebar.html %}

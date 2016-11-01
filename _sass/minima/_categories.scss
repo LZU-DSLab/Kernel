@@ -1,15 +1,12 @@
 #categories, #tags {
-  @media (min-width: 980px) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
   .breadcrumb {
     a {
       text-decoration: none;
       border: dashed 1px #ccc;
       border-radius: 3px;
-      padding: 5px;
-      margin: 5px;
+      padding: 3px 5px;
+      margin: 5px 3px;
+      display: inline-block;
       color: #555555;
       font-size: 16px;
       .label {
@@ -30,5 +27,11 @@
   h3 {
     text-shadow: 1px 1px 1px #868686;
     font-weight: 500;
+  }
+  &>ol {
+    list-style: none;
+  }
+  ul li {
+    line-height: 24px;
   }
 }
