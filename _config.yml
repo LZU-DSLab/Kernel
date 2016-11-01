@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: DSLab 内核小组
 email: kinggo@gmail.com
-description: DSLab 内核小组文献阅读记录与分享，专注于 Linux 内核开发
+description: DSLab 内核小组知识分享平台，专注于 Linux 内核学习与研究
 baseurl: "/kernel" # the subpath of your site, e.g. /blog
 url: "https://lzu-dslab.github.io/kernel" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  LZU-DSLab
@@ -29,9 +29,6 @@ paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
-redcarpet:
-  extensions: [fenced_code_blocks]
-
 kramdown:
   input: GFM
 gems:
