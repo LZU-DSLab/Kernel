@@ -65,7 +65,8 @@ DSLab 知识分享平台正式启用，平台浏览地址：<https://lzu-dslab.g
 
 6. 支持数学公式，例如：`$$a^2 + b^2 = c^2$$` => $$a^2 + b^2 = c^2$$
 7. 只接受实验室内部的文章，且每个小组有自己的仓库
-8. 有任何问题和建议请到 [Issues](https://github.com/LZU-DSLab/kernel/issues) 反馈。
+8. 注意，提交到 gh-pages 分支
+9. 有任何问题和建议请到 [Issues](https://github.com/LZU-DSLab/kernel/issues) 反馈。
 
 ## Tips
 
