@@ -26,14 +26,16 @@ html, body {
 }
 
 .page-header {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
   border-bottom: solid 1px #e0e0e0;
+}
+.page-content {
+  font-size: 1.2rem;
 }
 
 @import
   "minima/header",
-  "minima/footer",
   "minima/categories",
   "minima/search",
   "minima/acticle",

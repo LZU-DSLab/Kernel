@@ -5,30 +5,30 @@ layout: default
     <h2 class="page-header">所有分类</h2>
     <div class="breadcrumb">
     {% for cat in site.categories %}
-        <a href="#{{ cat | first }}">{{ cat | first }}<span>{{ cat | last | size }}</span></a>
+        <a href="#{{ cat | first |escape |upcase }}">{{ cat | first |escape |upcase }}<span>{{ cat | last | size }}</span></a>
     {% endfor %}
     </div>
 
     {% assign post_by_cat = site.posts | group_by:"categories" %}
 
     {% for cat in post_by_cat %}
-        <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' }}">
-            {{ cat.name |remove:"[" |remove:"]" |remove:'"' }}
+        <h3 id="{{ cat.name |remove:'[' |remove:']' |remove:'"' |escape |upcase }}">
+            {{ cat.name |remove:"[" |remove:"]" |remove:'"' |escape |upcase }}
         </h3>
         <ol>
             {% assign post_by_recommend = cat.items | group_by:"recommend" %}
             {% for recommend in post_by_recommend %}
                 <li><h4>
-                        {{ recommend.name }}
+                        {{ recommend.name |escape |upcase }}
                         <small>共{{ recommend.items | size }}篇</small>
                     </h4>
                     <ul>
                         {% for post in recommend.items %}
                             <li>
                                 <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
-                                <span>{{ post.cites }}</span>
-                                • <span>{{ post.author }}</span>
-                                • <span>{{ post.date | date:"%Y-%m-%d" }}</span>
+                                <span><i class="fa fa-code-fork"></i> {{ post.cites }}次&nbsp;&bull;&nbsp;</span>
+                                <span><i class="fa fa-user-circle-o"></i> {{ post.author }}&nbsp;&bull;&nbsp;</span>
+                                <span><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d" }}</span>
                             </li>
                         {% endfor %}
                     </ul>

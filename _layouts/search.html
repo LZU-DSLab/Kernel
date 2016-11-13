@@ -2,11 +2,9 @@
 layout: default
 ---
 
-<div id="search" class="span8">
+<div id="search">
     <div id="search-container">
-        <!--<form class="navbar-search">-->
-            <input type="text" class="search-query" id="search-input" placeholder="搜索...">
-        <!--</form>-->
+        <input type="text" class="search-query" id="search-input" placeholder="搜索...">
         <ul id="results-container"></ul>
     </div>
     <script src='{{ "/assets/libs/jekyll-simple-search.min.js" | prepend:site.baseurl }}' type="text/javascript"></script>
@@ -15,7 +13,7 @@ layout: default
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '{{ "/data/data.json" | prepend:site.baseurl }}',
-            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a><br><span>{category}&nbsp;{date}</span></li>'
+            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a><span>{category}&nbsp;{date}</span></li>'
         })
     </script>
 </div>

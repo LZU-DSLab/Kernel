@@ -6,7 +6,7 @@ categories:
     - Uncategory
 tags: 
     - Untag
-recommend: 新手必读
+recommend: 不值得读
 cites: 0
 paper: 2016-11-01-announcement.pdf
 description: 
