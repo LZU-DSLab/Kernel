@@ -1,24 +1,17 @@
 <div id="navbar" class="navbar">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-
-            <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-
-            <a class="brand" href="{{ '/' | prepend:site.baseurl }}">{{ site.title | escape }}</a>
-
-            <div class="nav-collapse navbar-responsive-collapse collapse ">
-                <ul class="nav pull-right">
-                    <li><a class="page-link" href='{{ "/tags"| prepend:site.baseurl }}'>标签</a></li>
-                    <li><a class="page-link" href='{{ "/categories"| prepend:site.baseurl }}'>分类</a></li>
-                    <li><a class="page-link" href='{{ "/search"| prepend:site.baseurl }}'>搜索</a></li>
-                    <li><a class="page-link" href='{{ "/about"| prepend:site.baseurl }}'>关于</a></li>
-                    <li><a class="page-link" href='{{ "/feed.xml"| prepend:site.baseurl }}'>RSS</a></li>
-                </ul>
-            </div>
+    <div class="desktop-navbar hidden-phone">
+        <h2 class="brand"><a href="{{ '/' | prepend:size.baseurl }}">{{ site.title | upcase}}</a> </h2>
+        <ul class="nav-links">
+            <li><a class="page-link" href='{{ "/tags"| prepend:site.baseurl }}'>Tags</a></li>
+            <li><a class="page-link" href='{{ "/categories"| prepend:site.baseurl }}'>Categories</a></li>
+            <li><a class="page-link" href='{{ "/search"| prepend:site.baseurl }}'>Search</a></li>
+            <li><a class="page-link" href='{{ "/about"| prepend:site.baseurl }}'>About</a></li>
+            <li><a class="page-link" href='{{ "/feed.xml"| prepend:site.baseurl }}'>RSS</a></li>
+        </ul>
+        <div class="site-attention">
+            <p>Made with <span class="heart">&heartsuit;</span> by <a href="http://dalab.lzu.edu.cn">DSLAB</a></p>
+            <p>本站所有内容遵守 <a href="{{ '/LICENSE.txt' |prepend:site.baseurl }}">CC-BY-SA-4.0</a> 协议 &bull; <a href="https://github.com/LZU-DSLab/kernel/issues">Issues</a></p>
+            <p>{{ site.description }}</p>
         </div>
     </div>
 </div>

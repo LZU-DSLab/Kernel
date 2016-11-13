@@ -1,30 +1,37 @@
 ---
 layout: default
 ---
-<div id="article" class="span8">
-    <div class="media">
-        <h3 class="page-header" itemprop="name headline">{{ page.title | escape }}</h3>
-        <p class="media-body">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: "%Y-%m-%d" }}
-            </time>
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+<div id="article">
+    <h3 class="post-title" itemprop="name headline">{{ page.title | escape }}</h3>
+    <p class="post-metas">
+        <time class="meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            <i class="fa fa-calendar"></i>
+            {{ page.date | date: "%Y-%m-%d" }}
+        </time>&nbsp;&bull;&nbsp;
+        <span class="meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <i class="fa fa-user-circle-o"></i>
                 <span itemprop="name">{{ page.author }}</span>
-            </span>
-            • <span>{{ page.cites }}</span>
-            • <span>
+            </span>&nbsp;&bull;&nbsp;
+        <span class="meta">
+                <i class="fa fa-folder-open-o"></i>
                 {% for cat in page.categories %}
-                    <a href='{{ "/categories/#" | prepend:site.baseurl | append:cat }}' title="{{cat}}">{{cat}}</a>
+                    <a href='{{ "/categories/#" | prepend:site.baseurl }}{{ cat |escape |upcase }}'
+                       title="{{cat |escape |upcase }}">{{cat |escape |upcase }}</a>
                 {% endfor %}
-            </span>
-            • <span>
+            </span>&nbsp;&bull;&nbsp;
+        <span class="meta">
+                <i class="fa fa-tags"></i>
                 {% for tag in page.tags %}
-                    <a href='{{ "/tags/#" | prepend:site.baseurl | append:tag }}' title="{{tag}}">{{tag | upcase}}</a>
+                    <a href='{{ "/tags/#" | prepend:site.baseurl }}{{ tag |escape |upcase }}'
+                       title="{{ tag |escape |upcase }}">{{ tag |escape |upcase }}</a>
                 {% endfor %}
+            </span>&nbsp;&bull;&nbsp;
+        <span class="meta">
+                <i class="fa fa-code-fork"></i>
+                {{ page.cites }} 次
             </span>
-            <input id="url" type="hidden" value='{{ "/data/papers/" | prepend:site.baseurl | append:page.paper}}'>
-        </p>
-    </div>
+        <input id="url" type="hidden" value='{{ "/data/papers/" | prepend:site.baseurl | append:page.paper}}'>
+    </p>
 
     <div class="post-content" itemprop="articleBody">
         {{ content }}
@@ -33,24 +40,32 @@ layout: default
     {% include duoshuo_share.html %}
 
     <div class="page-nav">
-        <ul class="pager">
+        <ul>
             {% if page.previous %}
             <li class="previous">
-                <a href="{{ page.previous.url | prepend:site.baseurl }}" title="{{page.previous.title | escape}}">&larr; {{page.previous.title | escape |truncate:10}}</a>
+                <span>&larr;</span>
+                <a href="{{ page.previous.url | prepend:site.baseurl }}"
+                   title="{{page.previous.title | escape}}">
+                    {{page.previous.title | escape |truncate:15}}
+                </a>
             </li>
             {% else %}
             <li class="previous disabled">
-                <a href="#">&larr; 上一篇</a>
+                <span>&larr; 上一篇</span>
             </li>
             {% endif %}
 
             {% if page.next %}
             <li class="next">
-                <a href="{{page.next.url | prepend:site.baseurl }}" title="{{page.next.title |escape}}">{{ page.next.title |escape |truncate:10 }} &rarr;</a>
+                <a href="{{page.next.url | prepend:site.baseurl }}"
+                   title="{{page.next.title |escape}}">
+                    {{ page.next.title |escape |truncate:15 }}
+                </a>
+                <span>&rarr;</span>
             </li>
             {% else %}
             <li class="next disabled">
-                <a href="#">下一篇 &rarr;</a>
+                <span>下一篇 &rarr;</span>
             </li>
             {% endif %}
         </ul>
@@ -60,8 +75,6 @@ layout: default
         {% include duoshuo_comments.html %}
     {% endif %}
 </div>
-
-
 {% if page.paper %}
     {% include pdfjs.html %}
 {% endif %}

@@ -1,0 +1,18 @@
+#sidebar {
+  @media (min-width: $tablet) {
+    width: 310px;
+    min-height: calc(100%);
+    float: left;
+    padding: 20px;
+  }
+  section.card {
+    border-bottom: dashed 1px #e0e0e0;
+    h3 {
+      font-size: 1.4rem;
+      color: #646464;
+    }
+  }
+  section.card:last-child {
+    border-bottom: none;
+  }
+}

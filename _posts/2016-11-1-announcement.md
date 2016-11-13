@@ -7,7 +7,7 @@ categories:
 tags: 
     - Untag
 recommend: 新手必读
-cites: 非论文
+cites: 0
 paper: 2016-11-01-announcement.pdf
 description: 
 author: 谢启荣
@@ -70,3 +70,40 @@ DSLab 知识分享平台正式启用，平台浏览地址：<https://lzu-dslab.g
 ## Tips
 
 在阅读论文读后感的时候可以点击左下角的按钮，显示论文原文，再次点击即可关闭。
+
+## 代码高亮测试
+```c
+#include <stdio.h>
+
+/*
+ * Hello world in C
+ */
+
+int main(int argc, char *argv[])
+{
+    printf("hello world!\n");
+    return 0;
+}
+```
+
+```html
+<!-- hello world in HTML -->
+<p>hello world</p>
+```
+
+```java
+//
+// hello world in Java
+//
+
+public class Hello {
+    static void main(){
+        System.out.println("Hello world\n");
+    }
+}
+```
+
+```python
+// hello world in Python
+print("hello wolrd")
+```

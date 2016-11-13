@@ -1,54 +1,34 @@
-.post-meta{
-  font-size: 14px;
-  line-height: 16px;
-  .label {
-    margin-right: 3px;
+$phone: 768px;
+$tablet: 992px;
+
+#content {
+  @media (min-width: $tablet) {
+    width: calc(100% - 700px);
+    min-height: 500px;
+    float: left;
+    margin-left: 250px;
+    padding: 50px;
+    padding-top: 20px;
   }
 }
 
-.post-content {
-  font-size: 16px;
-  line-height: 25px;
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-.home p {
-  line-height: 28px;
-}
-
-.pdf-wrapper {
-  border: none;
-  position: fixed;
-  box-shadow: 0 0 10px #b0b0b0;
-  bottom: 35px;
-  left: 35px;
-  height: 0;
-  width: 0;
-}
-.pdfToggle {
-  border-radius: 50%;
-  box-shadow: 0 0 10px #646464;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: none;
-  outline: none;
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
+html, body {
+  margin: 0;
   padding: 0;
-  z-index: 10;
-}
-.pdfToggle:focus {
-  outline: none;
-  border: none;
+  font-size: 13px;
 }
 
-#rootContainer>.row-fluid>.span8 {
-  @media (max-width: 979px) {
-    border-bottom: dashed 1px #e0e0e0;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-  }
+.page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-bottom: solid 1px #e0e0e0;
 }
 
 @import
@@ -56,5 +36,8 @@
   "minima/footer",
   "minima/categories",
   "minima/search",
-  "minima/acticle"
+  "minima/acticle",
+  "minima/sidebar",
+  "minima/post",
+  "minima/home"
 ;
