@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# This is a script to create a post with head automatically
+#
+currentDate=`date "+%Y-%m-%d"`
+currentTime=`date "+%Y-%m-%d %H:%M:%S +0800"`
+
+if [ $# != 2 ] ;then
+	echo "Usage: data/new-post \"post title\" \"post url\""
+	exit
+fi
+
+postTitle=$1
+postUrl=$(echo $2 |sed -e "s/^\ //; s/\ $//; s/\ /-/g")
+
+cat $PWD/data/template | sed -e "s/title:/title: \"$postTitle\"/; \
+ s/date:/date: $currentTime/; \
+ s/author:/author: $USER/" \
+ > $PWD/_posts/$currentDate"-$postUrl.md"
+
+echo "$PWD/_posts/$currentDate-$postUrl.md 已创建，开始写作吧！"

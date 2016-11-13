@@ -22,25 +22,6 @@
     a:hover {
       text-decoration: underline;
     }
-    code {
-      font-family: "Source Code Pro", Menlo, Monaco, monospace, Conlas;
-      font-size: 1rem;
-      color: #e96900;
-      background-color: #f8f8f8;
-      border-radius: 5px;
-      padding: 3px 8px;
-    }
-    pre {
-      padding: 10px 20px;
-      background-color: #f8f8f8;
-      line-height: 1.6rem;
-      border: solid 1px #e6e6e6;
-      box-shadow: 1px 1px 1px #e6e6e6;
-      code{
-        color: inherit;
-        padding: inherit;
-      }
-    }
   }
 
   .page-nav {

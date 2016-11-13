@@ -29,6 +29,10 @@ paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
+
+redcarpet:
+  extensions: ["fenced_code_blocks"]
+
 kramdown:
   input: GFM
 gems:
@@ -39,3 +43,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - data/new-post
+  - data/template
