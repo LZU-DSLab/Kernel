@@ -77,12 +77,10 @@ DSLab 文献管理平台正式启用，平台浏览地址：<https://lzu-dslab.g
 
 ## 代码高亮测试
 ```c
-#include <stdio.h>
-
 /*
  * Hello world in C
  */
-
+#include <stdio.h>
 int main(int argc, char *argv[])
 {
     printf("hello world!\n");
@@ -96,12 +94,9 @@ int main(int argc, char *argv[])
 ```
 
 ```java
-//
-// hello world in Java
-//
-
-public class Hello {
-    static void main(){
+// Hello world in Java
+public class HelloWorld {
+    static void main(String[] args){
         System.out.println("Hello world\n");
     }
 }
@@ -110,4 +105,15 @@ public class Hello {
 ```python
 // hello world in Python
 print("hello wolrd")
+```
+
+```cpp
+// Hello world in CPP
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Hello, world!" << endl;
+    return 0;
+}
 ```
