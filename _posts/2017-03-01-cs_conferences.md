@@ -16,6 +16,7 @@ description:
 author: Evan Zhao
 ---
 # Overview of CS Conferences
+
 ## Conferences on operating systems, storage systems and middleware:  
 - SOSP - ACM Symposium on Operating Systems Principles  
 - OSDI - USENIX Symposium on Operating Systems Design and - Implementation  
@@ -56,7 +57,8 @@ author: Evan Zhao
 - SCOPES - International Workshop on Software and Compilers for Embedded Systems  
 
 
-# SOSP - ACM Symposium on Operating Systems Principles  
+# SOSP - ACM Symposium on Operating Systems Principles 
+
 ## General Infomation
 - Rank:  A+
 - Display name:  SOSP  
@@ -65,17 +67,21 @@ author: Evan Zhao
 - Top Keywords:  file, operating, sosp, byzantine, bugs, untrusted, system, systems, fault, safe, commodity, virtual, acm, execution, energy, intrusions, disk, bolton, muvi, seda, thinc, untampered, asbestos, potemkin, thieves, schedular, secvisor, hibernator, racetrack, idletime, zyzzyva, mashupos, icomment, vigilante, infokernel, racerx  
 
 ## Locations and Websites
-Year|Location|Website  
------|----|----  
-2015|USA, Monterey|http://www.ssrc.ucsc.edu/sosp15/
-2017|China, Shanghai|https://www.sigops.org/sosp/sosp17/
+
+|Year|Location|Website|  
+|-----|----|----|  
+|2015|USA, Monterey|http://www.ssrc.ucsc.edu/sosp15/|  
+|2017|China, Shanghai|https://www.sigops.org/sosp/sosp17/|  
 
 ## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-2015|19 Mar 15|26 Mar 15|29 Jun 15|04 Oct 15|07 Oct 15|  
-2017|14 Apr 17|21 Apr 17|07 Aug 17|29 Oct 17|31 Oct 17| 
-# OSDI - USENIX Symposium on Operating Systems Design and - Implementation  
+
+|Year|Registration|Submission|Notification|Start Date|End Date|  
+|-----|----|----|----|----|----|  
+|2015|19 Mar 15|26 Mar 15|29 Jun 15|04 Oct 15|07 Oct 15|  
+|2017|14 Apr 17|21 Apr 17|07 Aug 17|29 Oct 17|31 Oct 17|  
+
+# OSDI - USENIX Symposium on Operating Systems Design and - Implementation 
+
 ## General Infomation
 - Rank:  A+
 - Display name:  OSDI  
@@ -83,16 +89,22 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 1, Libra: 1, Internet list: 1, Citeseer impact: 8.92, Graph analysis: 2  
 - Top Keywords:  file, storage, awarded, operating, system, farsite, byzantine, distributed, internet, paper, request, failure, best, resource, cheap, management, systems, disk, ksniffer, boxwood, millipage, iplane, ictcp, tapeworm, chubby, histar, browsershield, hogs, coign, planetseer, bigtable, microreboot, ffpf, overcast, sundr  
 
+
+
 ## Locations and Websites
-Year|Location|Website  
------|----|----  
-2016|USA, Savannah, GA|https://www.usenix.org/conference/osdi16
+
+|Year|Location|Website|  
+|-----|----|----|  
+|2016|USA, Savannah, GA|https://www.usenix.org/conference/osdi16|  
 
 ## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-2016|03 May 16|10 May 16|30 Jul 16|02 Nov 16|04 Nov 16|  
+
+|Year|Registration|Submission|Notification|Start Date|End Date|  
+|-----|----|----|----|----|----|  
+|2016|03 May 16|10 May 16|30 Jul 16|02 Nov 16|04 Nov 16|  
+
 # EuroSys - European Conference on Computer Systems  
+
 ## General Infomation
 - Rank:  A
 - Display name:  EuroSys  
@@ -101,19 +113,23 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  eurosys, middleware, operating, tashkent, drivers, tcb, collateral, replicated, singularity, cmp, file, lisbon, demand, device, eudaemon, rimac, vpfs, depspace, klogger, switchblade, stmbench7, hfs, fahrrad, dryad, greenfs, protectit, urica, borderpatrol, antiquity, solitude, itrustpage, performance, day, k42, melange  
 
 ## Locations and Websites
-Year|Location|Website  
------|----|----  
-2015|Bordeaux, France|http://eurosys2015.labri.fr/
-2016|UK, London|http://eurosys16.doc.ic.ac.uk/
-2017|Serbia, Belgrade|http://eurosys2017.org
+
+|Year|Location|Website  
+|-----|----|----  
+|2015|Bordeaux, France|http://eurosys2015.labri.fr/
+|2016|UK, London|http://eurosys16.doc.ic.ac.uk/
+|2017|Serbia, Belgrade|http://eurosys2017.org|
 
 ## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-2015|26 Sep 14|03 Oct 14|01 Dec 14|21 Apr 15|24 Apr 15|  
-2016|16 Oct 15|23 Oct 15|29 Jan 16|19 Apr 16|21 Apr 16|  
-2017|14 Oct 16|21 Oct 16|23 Jan 17|23 Apr 17|26 Apr 17|  
+
+|Year|Registration|Submission|Notification|Start Date|End Date|  
+|-----|----|----|----|----|----|  
+|2015|26 Sep 14|03 Oct 14|01 Dec 14|21 Apr 15|24 Apr 15|  
+|2016|16 Oct 15|23 Oct 15|29 Jan 16|19 Apr 16|21 Apr 16|  
+|2017|14 Oct 16|21 Oct 16|23 Jan 17|23 Apr 17|26 Apr 17|  
+
 # ATC - USENIX Annual Technical Conference  
+
 ## General Infomation
 - Rank:  C
 - Display name:  ATC  
@@ -121,14 +137,8 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 3, Libra: 3, Internet list: N/A, Citeseer impact: N/A, Graph analysis: 3  
 - Top Keywords:  autonomic, trust, trusted, based, computing, organic, trustworthy, reputation, scheme, security, atc, networks, system, roaming, p2p, self, secure, authentication, tolerant, key, stone, novel, signcryption, stepping, control, model, management, wireless, identity, systems, fault, signature, autonomous, peer, encryption  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
-
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
 # FAST - USENIX Conference on File and Storage Technologies  
+
 ## General Infomation
 - Rank:  A
 - Display name:  Fast  
@@ -136,16 +146,14 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 2, Libra: N/A, Internet list: N/A, Citeseer impact: N/A, Graph analysis: 2  
 - Top Keywords:  storage, file, disk, awarded, tocttou, disks, archival, write, attached, raid, francisco, california, system, versioning, writes, performance, san, disaster, filesystem, nfs, iscsi, hotel, technologies, erasure, lost, awol, tracefs, greetings, eio, yfs, graid, personalraid, atropos, demotions, pergamum, freeblock, microhash  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
+  
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
 # Middleware - ACM/IFIP/USENIX International Middleware Conference  
-# HotOS - Workshop on Hot Topics in Operating Systems  
+
+# HotOS - Workshop on Hot Topics in Operating Systems 
+
 ## General Infomation
+
 - Rank:  A
 - Display name:  HotOS  
 - Full name:  Workshop on Hot Topics in Operating Systems (HotOS)  
@@ -153,15 +161,14 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  os, hotos, operating, storage, systems, file, untrusted, reconsidering, routers, system, hot, adaption, peer, computing, management, case, xenoservers, restartability, resouce, accountin, macroanalysis, oberbayern, protium, cassyopia, needn, futz, elmau, censor, mansion, vvm, lihue, istore, herald, lana, forgets, plumbing  
 
 ## Locations and Websites
-Year|Location|Website  
------|----|----  
-2015|Switzerland, Kartause Ittingen|https://www.usenix.org/conference/hotos15
-2017|Canada, Whistler, BC|https://www.sigops.org/hotos/hotos17
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+|Year|Location|Website|    
+|-----|----|----|  
+|2015|Switzerland, Kartause Ittingen|https://www.usenix.org/conference/hotos15|  
+|2017|Canada, Whistler, BC|https://www.sigops.org/hotos/hotos17|  
+
 # NOSSDAV - International Workshop on Network and Operating Systems Support for Digital Audio and Video  
+
 ## General Infomation
 - Rank:  A
 - Display name:  NOSSDAV  
@@ -170,14 +177,13 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  streaming, nossdav, video, media, overlay, peer, multimedia, audio, scalable, games, multicast, operating, proxy, congestion, server, networks, adaptive, voip, sip, retransmission, tcp, quality, mmorpg, network, multiplayer, telephony, support, bandwidth, overlays, digital, delivery, stream, mpeg, management, mobile  
 
 ## Locations and Websites
-Year|Location|Website  
------|----|----  
-2016|Austria, Klagenfurt|http://mmsys2016.itec.aau.at/nossdav-2016/
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+|Year|Location|Website|  
+|-----|----|----|  
+|2016|Austria, Klagenfurt|http://mmsys2016.itec.aau.at/nossdav-2016/|
+ 
 #  ASPLOS - International Conference on Architectural Support for Programming Languages and Operating Systems  
+
 ## General Infomation
 - Rank:  A+
 - Display name:  ASPLOS  
@@ -186,6 +192,7 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  memory, operating, asplos, hardware, compiler, heap, architectural, instruction, execution, programming, transactional, virtualization, parallelism, speculative, speculation, plos, chip, prefetching, support, systems, software, performance, jose, architecture, storage, locality, tiny, languages, cache, address  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Turkey, Istanbul|http://asplos15.bilkent.edu.tr/
@@ -193,12 +200,15 @@ Year|Location|Website
 2017|China, Xi'an|http://novel.ict.ac.cn/ASPLOS2017/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|01 Aug 14|07 Aug 14|10 Nov 14|14 Jan 15|14 Mar 15|18 Mar 15|  
 2016|05 Aug 15|12 Aug 15|17 Nov 15|30 Jan 16|02 Apr 16|06 Apr 16|  
-2017|08 Aug 16|15 Aug 16|07 Nov 16|27 Jan 17|08 Apr 17|12 Apr 17|  
+2017|08 Aug 16|15 Aug 16|07 Nov 16|27 Jan 17|08 Apr 17|12 Apr 17|
+
 # ISCA - International Symposium on Computer Architecture (Annual Symposium on Computer Architecture)  
+
 ## General Infomation
 - Rank:  C
 - Display name:  ISCA  
@@ -207,6 +217,7 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  retrospective, memory, multiprocessors, instruction, processors, cache, processor, architecture, performance, branch, chip, prediction, isca, store, speculative, ilp, coherence, microarchitecture, speculation, architectures, architectural, level, parallelism, high, issue, vax, caches, multithreading, pipeline  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, Portland, OR|http://www.ece.cmu.edu/calcm/isca2015/
@@ -214,12 +225,15 @@ Year|Location|Website
 2017|Canada, Toronto, ON|http://isca17.ece.utoronto.ca/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|18 Nov 14|25 Nov 14|06 Mar 15|20 Apr 15|13 Jun 15|17 Jun 15|  
 2016|13 Nov 15|20 Nov 15|07 Mar 16|17 Apr 16|18 Jun 16|22 Jun 16|  
 2017|11 Nov 16|18 Nov 16|08 Mar 17|01 May 17|24 Jun 17|28 Jun 17|  
+
 # MICRO - IEEE/ACM International Symposium on Microarchitecture  
+
 ## General Infomation
 - Display name:  MICRO  
 - Full name:  International Symposium on Microarchitecture  
@@ -227,16 +241,19 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  instruction, microarchitecture, processors, cache, processor, register, caches, memory, superscalar, chip, scheduling, dynamic, branch, power, parallelism, microarchitectural, vliw, microprocessors, store, prediction, architectures, performance, compiler, execution, hardware, annual, exploiting, reducing  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, Waikiki, HI|http://www.microarch.org/micro48/
 2016|Taiwan, Taipei|http://www.microarch.org/micro49/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|15 May 15|22 May 15|03 Sep 15|05 Dec 15|09 Dec 15|  
 2016|03 Apr 16|10 Apr 16|25 Jun 16|15 Oct 16|19 Oct 16|  
+
 # HPCA - International Symposium on High-Performance Computer Architecture  
  ## General Infomation
  - Rank:  A+
@@ -246,6 +263,7 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  memory, processors, cache, multiprocessors, multithreading, performance, branch, chip, speculative, shared, speculation, power, prefetching, caches, smt, instruction, processor, thread, prediction, hpca, architecture, cmp, hardware, thermal, register, multithreaded, architectural, dsm, workloads, exploiting, dram  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, Bay Area, CA|http://darksilicon.org/hpca/
@@ -253,26 +271,24 @@ Year|Location|Website
 2017|USA, Austin, TX|http://hpca2017.org/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|05 Sep 14|12 Sep 14|10 Nov 14|07 Feb 15|11 Feb 15|  
 2016|04 Sep 15|11 Sep 15|09 Nov 15|12 Mar 16|16 Mar 16|  
 2017|25 Jul 16|01 Aug 16|12 Oct 16|04 Feb 17|08 Feb 17|  
+
 # ISPD - International Symposium on Physical Design  
+
 ## General Infomation
 - Display name:  ispd  
 - Full name:  International Symposium on Physical Design (ISPD)  
 - Rating:  Combined: 2, Libra: 2, Internet list: N/A, Citeseer impact: N/A, Graph analysis: 3  
 - Top Keywords:  placement, floorplanning, physical, routing, ispd, interconnect, insertion, floorplan, sizing, clock, design, timing, buffer, crosstalk, layout, wire, chip, placer, power, tree, synthesis, driven, congestion, optimization, steiner, rectilinear, gate, algorithm, vlsi, delay, cell, thermal, skew, noise, circuit, partitioning  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
-
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+  
 # CHES - Cryptographic Hardware and Embedded Systems  
+
 ## General Infomation
 - Display name:  CHES  
 - Full name:  Cryptographic Hardware and Embedded Systems (CHES)  
@@ -280,15 +296,14 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  aes, hardware, elliptic, dpa, attacks, ches, curve, power, multiplication, rsa, cryptographic, fpga, channel, attack, rijndael, cryptography, differential, montgomery, cryptosystems, bit, countermeasures, exponentiation, modular, coprocessor, scalar, masking, arithmetic, ecc, implementation, rail, hyperelliptic  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|France, Saint Malo|http://www.chesworkshop.org/ches2015/
 2016|USA, Santa Barbara, CA|http://www.chesworkshop.org/ches2016/
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
 # ICCD - International Conference on Computer Design  
+
 ## General Infomation
 - Display name:  ICCD  
 - Full name:  International Conference on Computer Design (ICCD)  
@@ -296,15 +311,19 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  power, chip, circuits, low, processors, cache, design, processor, energy, test, high, performance, leakage, synthesis, efficient, cmos, architecture, crosstalk, interconnect, scan, hardware, microprocessor, memory, timing, gate, delay, multiplier, embedded, using, based, level, reduction, dsp, buffer, vlsi, logic, voltage  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, New York City|http://www.iccd-conf.com/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|11 May 15|18 May 15|21 Jul 15|22 Aug 15|19 Oct 15|21 Oct 15|  
-# ISLPED - International Symposium on Low Power Electronics and Design  
+
+# ISLPED - International Symposium on Low Power Electronics and Design
+
 ## General Infomation
 - Display name:  ISLPED  
 - Full name:  International Symposium on Low Power Electronics and Design  
@@ -312,31 +331,30 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  power, low, energy, cmos, voltage, leakage, circuits, chip, high, cache, sram, poster, design, aware, circuit, reduction, scaling, threshold, efficient, soi, consumption, sub, battery, supply, gate, clock, reducing, gating, processors, thermal, optimization, ultra, variation, subthreshold, logic, dual, microprocessors, session  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Italy, Rome|http://www.islped.org/2015/index.html
 2016|USA, San Francisco, CA|http://www.islped.org/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|01 Mar 15|08 Mar 15|01 May 15|01 Jun 15|22 Jul 15|24 Jul 15|  
 2016|21 Feb 16|28 Feb 16|30 Apr 16|15 Jun 16|08 Aug 16|10 Aug 16|  
+
 # FCCM - Field-Programmable Custom Computing Machines  
+
 ## General Infomation
 - Display name:  FCCM  
 - Full name:  Field-Programmable Custom Computing Machines (FCCM)  
 - Rating:  Combined: 2, Libra: 2, Internet list: 2, Citeseer impact: N/A, Graph analysis: 2  
 - Top Keywords:  reconfigurable, fpga, fpgas, hardware, fccm, napa, floating, computing, programmable, custom, processor, architectures, architecture, reconfiguration, dynamically, based, configurable, design, accelerating, coprocessor, processing, chip, point, compilation, implementation, arithmetic, using, embedded, high  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
-
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+  
 # FPGA - Symposium on Field Programmable Gate Arrays  
+
 ## General Infomation
 - Display name:  FPGA  
 - Full name:  Symposium on Field Programmable Gate Arrays (FPGA)  
@@ -344,14 +362,14 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  fpga, fpgas, reconfigurable, abstract, programmable, lut, hardware, poster, interconnect, routing, architecture, gate, placement, arrays, based, logic, high, sigda, architectures, embedded, implementation, power, design, routability, blocks, performance, field, reconfiguration, circuits, mapping, timing  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2016|USA, Monterey, CA|http://www.isfpga.org/
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+
 # ISSS - International Symposium on Systems Synthesis  
+
 ## General Infomation
 - Rank:  C
 - Display name:  isss  
@@ -359,14 +377,9 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 3, Libra: 3, Internet list: N/A, Citeseer impact: 0.66, Graph analysis: 2  
 - Top Keywords:  synthesis, embedded, instruction, vliw, processors, level, power, chip, dsp, memory, design, scheduling, system, exploration, hardware, multiprocessor, soc, architectures, loop, dataflow, software, reconfigurable, systems, processor, pipelined, optimization, cores, retargetable, grain, voltage, energy, codesign, code  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
+  
+# CODES+ISSS - International Conference on Hardware Software Codesign 
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-# CODES+ISSS - International Conference on Hardware Software Codesign  
 ## General Infomation
 - Display name:  CODES+ISSS  
 - Full name:  International Conference on Hardware/Software Codesign and System Synthesis  
@@ -374,17 +387,21 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  embedded, codesign, hardware, hw, chip, sw, design, synthesis, systems, software, level, power, energy, system, memory, exploration, multiprocessor, time, instruction, processor, processors, scheduling, communication, soc, isss, retargetable, architectures, code, estimation, noc, real, cosimulation, simulation, voltage  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Netherlands, Amsterdam|http://esweek.acm.org/codesisss/
 2016|USA, Pittsburgh|http://esweek.acm.org/codesisss/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|23 Mar 15|30 Mar 15|08 Jun 15|13 Jul 15|04 Oct 15|09 Oct 15|  
 2016|01 Apr 16|08 Apr 16|01 Jul 16|15 Jul 16|02 Oct 16|07 Oct 16|  
+
 # ARVLSI - Advanced Research in VLSI  
+
 ## General Infomation
 - Rank:  C
 - Display name:  arvlsi  
@@ -392,14 +409,9 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 2, Libra: 2, Internet list: N/A, Citeseer impact: N/A, Graph analysis: 3  
 - Top Keywords:  vlsi, analog, circuits, gigascale, arvlsi, cmos, gate, translinear, multiplier, interconnect, chip, subthreshold, adiabatic, neuromorphic, floating, asynchronous, focal, ultrascalar, afsms, signal, pipelines, powered, mems, programmable, sensors, power, cdfg, pfet, volt, backtrace, interconnectivity, harbor, finally  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
-
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+  
 # ASAP - Application-Specific Systems, Architectures, and Processors  
+
 ## General Infomation
 - Rank:  A
 - Display name:  ASAP  
@@ -407,14 +419,9 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Rating:  Combined: 3, Libra: 3, Internet list: 3, Citeseer impact: N/A, Graph analysis: 3  
 - Top Keywords:  processor, processors, fpga, hardware, reconfigurable, instruction, chip, architecture, radix, bit, design, decimal, arrays, specific, floating, asap, architectures, multiplication, systolic, processing, register, high, implementation, decoder, array, efficient, simd, memory, power, adder, addition, application  
 
-## Locations and Websites
-Year|Location|Website  
------|----|----  
-
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+  
 # ISCAS - IEEE International Symposium on Circuits and Systems  
+
 ## General Infomation
 - Rank:  A+
 - Display name:  iscas  
@@ -423,17 +430,21 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  cmos, low, power, voltage, analog, amplifier, sigma, circuit, delta, filters, filter, circuits, current, frequency, converter, noise, high, design, chip, fir, digital, vlsi, modulator, converters, based, using, ghz, video, mode, bit, speed, phase, adc, signal, algorithm, modulators, gate, rf, amplifiers, oscillator, novel, gain  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Portugal, Lisbon|http://www.iscas2015.org/
 2016|Canada, Montreal|http://iscas2016.org/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|06 Feb 15|17 Oct 14|31 Oct 14|06 Feb 15|24 May 15|27 May 15|  
 2016|15 Feb 16|09 Oct 15|11 Jan 16|15 Feb 15|22 May 16|25 May 16|  
+
 # RTSS - IEEE Real-Time Systems Symposium  
+
 ## General Infomation
 - Display name:  RTSS (A-1)  
 - Full name:  IEEE Real-Time Systems Symposium (RTSS)  
@@ -441,15 +452,14 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  real, time, scheduling, schedulability, systems, edf, tasks, rtss, hard, priority, periodic, sensor, wireless, timing, analysis, embedded, multiprocessor, voltage, wcet, resource, deadline, scheduled, networks, qos, energy, task, fixed, control, rate, deadlines, pfair, distributed, aware, multiprocessors, sporadic, based  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, San Antonio, TX|http://2015.rtss.org/
 2016|Portugal, Porto|http://2016.rtss.org/
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-# RTAS - IEEE Real-Time and Embedded Technology and Applications Symposium  
+# RTAS - IEEE Real-Time and Embedded Technology and Applications Symposium 
+
 ## General Infomation
 - Display name:  RTAS (B)  
 - Full name:  IEEE Real Time Technology and Applications Symposium  
@@ -457,6 +467,7 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  real, time, embedded, scheduling, rtas, qos, systems, tasks, priority, resource, schedulability, timing, multiprocessor, task, nt, control, worst, applications, performance, energy, ieee, voltage, symposium, software, analysis, middleware, distributed, corba, allocation, linux, predictable, hardware, management  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, Seattle|http://2015.rtas.org/
@@ -464,25 +475,29 @@ Year|Location|Website
 2017|USA, Pittsburgh|http://2017.rtas.org
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|13 Oct 14|20 Oct 14|13 Dec 14|13 Apr 15|17 Apr 15|  
+
 # LCTES - ACM SIGPLAN/SIGBED Conference on Languages, Compilers, and Tools for Embedded Systems  
+
 ## General Infomation
 - Display name:  LCTES  
 - Full name:  Languages, Compilers, and Tools for Embedded Systems (LCTES)  
 - Rating:  Combined: 3, Libra: N/A, Internet list: N/A, Citeseer impact: N/A, Graph analysis: 3  
 - Top Keywords:  embedded, lctes, register, compilers, compiler, code, sigbed, systems, vliw, sigplan, processors, time, real, garbage, cache, instruction, scheduling, energy, java, software, languages, memory, optimizing, tools, voltage, acm, architectures, compilation, allocation, june, edf, compiling, efficient, reconfigurable, thread  
+
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|USA, Portland, OR|http://lctes2015.lctes.org/
 2017|Spain, Barcelona|http://conf.researchr.org/track/LCTES-2017/LCTES-2017-papers
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
+
 # CASES - International Conference on Compilers, Architecture, and Synthesis for Embedded Systems  
+
 ## General Infomation
 - Display name:  CASES  
 - Full name:  International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES)  
@@ -490,17 +505,21 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  embedded, processors, compiler, instruction, memory, power, code, energy, processor, vliw, architecture, chip, cache, systems, compilers, time, compilation, optimizations, scratchpad, dsp, accelerators, architectures, synthesis, reconfigurable, efficient, register, real, loop, instructions, voltage, software, low  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Amsterdam, The Netherlands|http://esweek.acm.org/cases/
 2016|USA, Pittsburgh|http://esweek.acm.org/cases/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|23 Mar 15|30 Mar 15|08 Jun 15|13 Jul 15|04 Oct 15|09 Oct 15|  
 2016|01 Apr 16|08 Apr 16|01 Jul 16|15 Jul 16|02 Oct 16|07 Oct 16|  
+
 # EMSOFT - International Conference on Embedded Software  
+
 ## General Infomation
 - Display name:  EMSOFT  
 - Full name:  International Conference on Embedded Systems (EMSOFT)  
@@ -508,6 +527,7 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  embedded, emsoft, systems, time, real, software, synchronous, scheduling, memory, programs, compiler, triggered, energy, flash, processors, schedulability, lustre, design, code, processor, analysis, wcet, distributed, resource, heterogeneous, reactive, nand, java, giotto, modeling, chip, allocation, simulink, acm  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Amsterdam, The Netherlands|http://www.emsoft.org/
@@ -515,11 +535,14 @@ Year|Location|Website
 2017|South Korea, Seoul|http://www.esweek.org/emsoft/
 
 ## Timeline
+
 Year|Registration|Submission|Notification|Start Date|End Date  
 -----|----|----|----|----|----  
 2015|23 Mar 15|30 Mar 15|08 Jun 15|13 Jul 15|04 Oct 15|09 Oct 15|  
 2016|01 Apr 16|08 Apr 16|01 Jul 16|15 Jul 16|02 Oct 16|07 Oct 16|  
+
 # ECRTS - Euromicro Conference on Real-Time Systems  
+
 ## General Infomation
 - Display name:  ECRTS (A)  
 - Full name:  Euromicro Conference on Real-Time Systems (ECRTS)  
@@ -527,16 +550,16 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  real, time, scheduling, ecrts, schedulability, systems, euromicro, edf, tasks, wcet, multiprocessor, multiprocessors, priority, hard, analysis, preemptive, worst, execution, pfair, timing, fixed, energy, aperiodic, qos, task, control, times, scheduled, response, preemptions, utilization, feasibility, periodic  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2015|Sweden, Lund|ecrts15.ecrts.org
 2016|France, Toulouse|ecrts16.ecrtrs.org
 2017|Croatia, Dubrovnik|http://ecrts.eit.uni-kl.de/ecrts17
+  
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
 # SCOPES - International Workshop on Software and Compilers for Embedded Systems  
+
 ## General Infomation
 - Display name:  scopes  
 - Full name:  Software and Compilers for Embedded Systems  
@@ -544,14 +567,11 @@ Year|Registration|Submission|Notification|Start Date|End Date
 - Top Keywords:  code, embedded, instruction, compilers, ssa, processor, dsp, scopes, vliw, software, predicated, instructions, address, generation, wcet, dataflow, loop, memory, dual, multiprocessor, cache, architectures, assignment, mlca, partitioning, systems, banks, pipelining, size, superinstructions, crusoe, mtp, offset  
 
 ## Locations and Websites
+
 Year|Location|Website  
 -----|----|----  
 2016|Germany , St. Goar|http://www.scopesconf.org/scopes-16/
 
-## Timeline
-Year|Registration|Submission|Notification|Start Date|End Date  
------|----|----|----|----|----  
-
 # References
->Rank data comes from http://lipn.univ-paris13.fr/~bennani/CSRank.html  
+>Rank data comes from [http://lipn.univ-paris13.fr/~bennani/CSRank.html](http://lipn.univ-paris13.fr/~bennani/CSRank.html)  
 >Conference details data comes from [www.confsearch.org](http://www.confsearch.org/confsearch/) who claims most conference information originates from [DBLP](http://www.informatik.uni-trier.de/~ley/db/)
