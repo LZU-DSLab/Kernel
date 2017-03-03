@@ -16,6 +16,10 @@ description:
 author: Evan Zhao
 ---
 # Overview of CS Conferences
+本文整理了四个方向, 共30个国际学术会议. 给出了会议相关的评级, 关键字, 历年网址以及会议日程等相关情况.  
+列表整理自清华大学发布的"重要国际学术会议目录", 上海交通大学发布的"重要国际学术会议目录", 以及Wikipedia词条[List_of_computer_science_conferences](https://en.wikipedia.org/wiki/List_of_computer_science_conferences).  
+部分网址可以直接访问历年会议文献.  
+推荐使用[DBLP数据库](http://dblp.uni-trier.de/),[Bing学术搜索](http://cn.bing.com/academic/),以及[微软学术](http://academic.research.microsoft.com/).
 
 ## Conferences on operating systems, storage systems and middleware:  
 - 1.SOSP - ACM Symposium on Operating Systems Principles  
